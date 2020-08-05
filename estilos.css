@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body{
+	margin-top: 40pt;
+}
+
+p, a{
+	font-size: 10pt;
+	font-family: 'Poppins', Sans-Serif;
+	margin: auto;
+	width: 90%;
+	padding-bottom: 25pt;
+	padding-top: 25pt;
+	text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Poppins', Sans-Serif;
+}
+
+/*View*/
+
+#topBar{
+	background-color: white;
+	box-shadow: 2px 2px 5px #999;
+	position: fixed;
+	overflow: hidden;
+	height: 40pt;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#topBar a{
+	background-color: #c8eef5;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 12pt 12pt 18pt 18pt;
+	display: block;
+	height: 40pt;
+	width: 90pt;
+	float: right;
+}
+
+#topBar a:hover{
+	background-color: #0071e6;
+	font-weight: normal;
+	color: white;
+}
+
+#topBar #selected{
+	background-color: #0094e6;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 12pt 12pt 18pt 18pt;
+	display: block;
+	height: 40pt;
+	width: 90pt;
+	float: right;
+}
+
+#topBar p{
+	float: left;
+	margin-right: 0;
+	padding: 12pt 12pt 18pt 18pt;
+	display: block;
+	height: 40pt;
+	width: 90pt;
+	text-align: center;
+}
+
+#topBar #logo{
+	font-weight: 700;
+	font-size: 2em;
+	color: #0094e6;
+	padding: 4pt;
+}
+
+#topBar img{
+	margin-left: 5pt;
+	width: 40pt;
+	float: left;
+	padding: 4pt;
+}
+
+.ending{
+	font-size: 8pt;
+	color: grey;
+	float: left;
+	padding-top: 0;
+}
+
+/*Index*/
+
+#beach{
+	position: bottom;
+	width: 100%;
+	height: 100%;
+}
+
+.title{
+	width: 54%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title #banner{
+	float: left;
+	width: 100pt;
+	height: 100pt;
+	padding-top: 12pt;
+	padding-left: 5pt;
+}
+
+.title #banner2{
+	color: #0094e6;
+	font-size: 100pt;
+}
+
+.description{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.column{
+	padding: 0;
+	background-color: black;
+}
+
+.column img{
+	width: 100%;
+}
+
+.column1{
+	background-color: green;
+}
+
+.column2{
+	background-color: red;
+}
+
+.column3{
+	background-color: blue;
+}
+
+.column1 p, .column2 p, .column3 p, .column1 h4, .column2 h4, .column3 h4{
+	text-align: center;
+	color: white;
+}
+
+/*Actividades*/
+
+.buscar{
+	background-color: #0094e6;
+	margin-top: 100pt;
+	padding: 20pt;
+	width: 500pt;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
+
+.buscar h2{
+	text-align: center;
+	color: white;
+	padding-bottom: 20pt;
+}
+
+.buscar .inputText{
+	width: 70%;
+	float: left;
+	height: 20pt;
+	border-radius: 5px;
+}
+
+.buscar select{
+	width: 20%;
+	height: 20pt;
+	margin-left: 5%;
+}
+
+.buscar .inputSubmit{
+	width: 100pt;
+	height: 20pt;
+	margin-top: 20pt;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.activities{
+	background-color: blue;
+	text-align: center;
+	margin-top: 50pt;
+	font-size: 10pt;
+	font-family: 'Poppins', Sans-Serif;
+}
+
+.activities th{
+	background-color: #0071e6;
+	color: white;
+	padding-bottom: 20pt;
+	padding-top: 20pt;
+}
+
+.activities td{
+	width: 20%;
+	background-color: #c8eef5;
+}
+
+.activities tr:hover{
+	background-color: #0094e6;
+	color: white;
+}
+
+.activities img{
+	width: 100%;
+}
+
+/*login*/
+
+.login{
+	background-color: #0094e6;
+	margin-top: 100pt;
+	margin-bottom: 100pt;
+	padding: 20pt;
+	width: 300pt;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
+
+.login h2{
+	text-align: center;
+	color: white;
+	padding-bottom: 20pt;
+}
+
+.login input{
+	width: 100%;
+	height: 20pt;
+	border-radius: 5px;
+	margin-bottom: 20pt;
+}
+
+.login2{
+	background-color: #0094e6;
+	margin-top: 5pt;
+	margin-bottom: 100pt;
+	padding: 20pt;
+	width: 300pt;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
+
+.login2 h2{
+	text-align: center;
+	color: white;
+	padding-bottom: 20pt;
+}
+
+.login2 input{
+	width: 100%;
+	height: 20pt;
+	border-radius: 5px;
+	margin-bottom: 20pt;
+}
+
+.error{
+	color: red;
+	padding: 0;
+	margin-top: 80pt;
+	margin-right: auto;
+	margin-left: auto;
+	width: 300pt;
+	text-align: center;
+}
+
+/*Activity*/
+
+.activityName{
+	margin-top: 80pt;
+	text-align: center;
+}
+
+.activityImage{
+	width: 300pt;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-bottom: 20pt;
+}
+
+.base{
+	 font-weight: bold;
+	 margin: 0;
+	 padding: 0;
+}
+
+.info{
+	margin-top: 0;
+	padding-top: 5pt;
+}
