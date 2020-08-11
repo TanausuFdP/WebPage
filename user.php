@@ -13,29 +13,42 @@ $user = User::getLoggedUser();
 View::start("{$user['cuenta']} - GCActiva");
 View::topBar(3);
 
-echo "<h2>Hola, {$user['nombre']}</h2>
-<h4>Tu información:</h4>
-<p>Correo: {$user['email']}</p>
-<p>Lugar de residencia: {$user['poblacion']}</p>
-<p>Dirección: {$user['direccion']}</p>
-<p>Teléfono de contacto: {$user['telefono']}";
-
 if($user['tipo'] == 2){
 	$id = $user['id'];
 	$empresas = DB::execute_sql("SELECT * FROM EMPRESAS WHERE IDEMPRESA = '$id'");
-	foreach($empresas as $empresa){
-		echo "<p>Descripción de la empresa: {$empresa['descripcion']}</p>
-		<p>Contacto de la empresa: {$empresa['contacto']}</p>";
-	}
+	$empresa = $empresas->fetch();
+	$imagen = View::imgtobase64($empresa['logo']);
+	echo "<img class=\"logo\" src=\"$imagen\">";
+} else {
+	echo "<img class=\"logo\" src=\"Imágenes/perfil.png\">";
+}
+
+echo "<h2 class=\"saludo\">Hola, {$user['nombre']}</h2>
+<h4>Tu información:</h4>
+<p class=\"base\">Correo:</p>
+<p class=\"info\">{$user['email']}</p>
+<p class=\"base\">Lugar de residencia:</p>
+<p class=\"info\">{$user['poblacion']}</p>
+<p class=\"base\">Dirección:</p>
+<p class=\"info\">{$user['direccion']}</p>
+<p class=\"base\">Teléfono de contacto:</p>
+<p class=\"info\">{$user['telefono']}";
+
+if($user['tipo'] == 2){
+	echo "<p class=\"base\">Descripción de la empresa:</p>
+	<p class=\"info\">{$empresa['descripcion']}</p>
+	<p class=\"base\">Contacto de la empresa:</p>
+	<p class=\"info\">{$empresa['contacto']}</p>";
 	$actividades = DB::execute_sql("SELECT * FROM actividades WHERE idempresa = '$id'");
-	echo "<h3>Sus actividades</h3>
-	<table>
+	echo "<h3>Tus actividades</h3>
+	<table class=\"userActivities\">
 	<tr>
 	<th></th>
 	<th>Nombre</th>
 	<th>Tipo</th>
 	<th>Precio</th>
 	<th>Fecha</th>
+	<th></th>
 	</tr>";
 	foreach($actividades as $actividad){
 		$fecha = date("d-m-Y H:i:s", "{$actividad['inicio']}");
@@ -50,12 +63,12 @@ if($user['tipo'] == 2){
 		</tr>";
 	}
 	echo "</table>
-	<form action=\"modify.php\" method=\"post\">
+	<form class=\"nueva\" action=\"modify.php\" method=\"post\">
 	<input type=\"submit\" value=\"Nueva actividad\">
 	</form>";
 }
 
-echo "<form action=\"user.php\">
+echo "<form class=\"salir\" action=\"user.php\">
 <input type=\"submit\" name=\"logout\" value=\"Salir\">
 </form>";
 

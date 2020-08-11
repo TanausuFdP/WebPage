@@ -194,7 +194,9 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	margin-top: 50pt;
 	font-size: 10pt;
+	border-collapse: collapse;
 	font-family: 'Poppins', Sans-Serif;
+	width: 100%;
 }
 
 .activities th{
@@ -206,16 +208,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .activities td{
 	width: 20%;
+}
+
+.activities tr{
 	background-color: #c8eef5;
 }
 
+.activities tr:nth-child(even){
+	background-color: #93deeb;
+}
+
 .activities tr:hover{
-	background-color: #0094e6;
+	background-color: #28bdd7;
 	color: white;
 }
 
 .activities img{
-	width: 100%;
+	width: 100pt;
+	height: 100pt;
+	object-fit: cover;
 }
 
 /*login*/
@@ -302,4 +313,98 @@ h1, h2, h3, h4, h5, h6 {
 .info{
 	margin-top: 0;
 	padding-top: 5pt;
+}
+
+/*User*/
+
+.logo{
+	border-radius: 50%;
+	object-fit: cover;
+	width: 150pt;
+	height: 150pt;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70pt;
+	display: block;
+}
+
+.saludo{
+	text-align: center;
+}
+
+.userActivities{
+	background-color: blue;
+	text-align: center;
+	margin-top: 50pt;
+	font-size: 10pt;
+	border-collapse: collapse;
+	font-family: 'Poppins', Sans-Serif;
+	width: 100%;
+}
+
+.userActivities th{
+	background-color: #0071e6;
+	color: white;
+	padding-bottom: 20pt;
+	padding-top: 20pt;
+}
+
+.userActivities td{
+	width: 18%;
+}
+
+.userActivities tr{
+	background-color: #c8eef5;
+}
+
+.userActivities tr:nth-child(even){
+	background-color: #93deeb;
+}
+
+.userActivities tr:hover{
+	background-color: #28bdd7;
+	color: white;
+}
+
+.userActivities img{
+	width: 100pt;
+	height: 100pt;
+	object-fit: cover;
+}
+
+.userActivities button{
+	background-color: red;
+	color: white;
+	width: 50pt;
+	height: 35pt;
+	border-radius: 5px;
+}
+
+.nueva{
+	margin-top: 10pt;
+}
+
+.nueva input{
+	background-color: #c8eef5;
+	width: 100pt;
+	height: 30pt;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.salir{
+	margin-top: 30pt;
+}
+
+.salir input{
+	background-color: red;
+	color: white;
+	width: 100pt;
+	height: 30pt;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: 10pt;
 }

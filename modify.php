@@ -64,16 +64,16 @@ if(array_key_exists("id", $_REQUEST)){
 
 	echo "<form enctype=\"multipart/form-data\" action=\"modify.php\" method=\"post\">
 	<input type=\"hidden\" name=\"id\" value=\"{$activity['id']}\">
-	<label>Nombre:</label><input type=\"text\" name=\"nombre\" value=\"{$activity['nombre']}\">
-	<label>Tipo:</label><input type=\"text\" name=\"tipo\" value=\"{$activity['tipo']}\">
-	<label>Descripción:</label><textarea name=\"descripcion\">{$activity['descripcion']}</textarea>
-	<label>Precio:</label><input type=\"number\" name=\"precio\" value=\"{$activity['precio']}\" min=\"0\" step=\"any\">
-	<label>Aforo:</label><input type=\"number\" name=\"aforo\" value=\"{$activity['aforo']}\" min=\"1\" step=\"1\">
-	<label>Inicio:</label><input type=\"date\" name=\"inicio\" value=\"$date\">
-	<label> Hora: </label> <input type=\"number\" name=\"hora\" min=\"00\" max=\"23\" value=\"$hour\"/>
-    <label> Minutos: </label><input type=\"number\" name=\"minuto\" min=\"00\" max=\"59\" value=\"$minute\"/>
-	<label>Duración en minutos:</label><input type=\"number\" name=\"duracion\" value=\"$duracion\">
-	<input type=\"file\" name=\"photo\"/> 
+	<label>Nombre:</label><input type=\"text\" name=\"nombre\" value=\"{$activity['nombre']}\"><br>
+	<label>Tipo:</label><input type=\"text\" name=\"tipo\" value=\"{$activity['tipo']}\"><br>
+	<label>Descripción:</label><textarea name=\"descripcion\">{$activity['descripcion']}</textarea><br>
+	<label>Precio:</label><input type=\"number\" name=\"precio\" value=\"{$activity['precio']}\" min=\"0\" step=\"any\"><br>
+	<label>Aforo:</label><input type=\"number\" name=\"aforo\" value=\"{$activity['aforo']}\" min=\"1\" step=\"1\"><br>
+	<label>Inicio:</label><input type=\"date\" name=\"inicio\" value=\"$date\"><br>
+	<label> Hora: </label> <input type=\"number\" name=\"hora\" min=\"00\" max=\"23\" value=\"$hour\"/><br>
+    <label> Minutos: </label><input type=\"number\" name=\"minuto\" min=\"00\" max=\"59\" value=\"$minute\"/><br>
+	<label>Duración en minutos:</label><input type=\"number\" name=\"duracion\" value=\"$duracion\"><br>
+	<input type=\"file\" name=\"photo\"/><br>
 	<input type=\"submit\" name=\"action\" value=\"Modificar\">
 	<input type=\"submit\" name=\"action\" value=\"Cancelar\">
 	</form>";
@@ -82,16 +82,16 @@ if(array_key_exists("id", $_REQUEST)){
 	View::topBar(0);
 
 	echo "<form enctype=\"multipart/form-data\" action=\"modify.php\" method=\"post\">
-	<label>Nombre:</label><input type=\"text\" name=\"nombre\">
-	<label>Tipo:</label><input type=\"text\" name=\"tipo\">
-	<label>Descripción:</label><textarea name=\"descripcion\"></textarea>
-	<label>Precio:</label><input type=\"number\" name=\"precio\" min=\"0\" step=\"any\">
-	<label>Aforo:</label><input type=\"number\" name=\"aforo\" min=\"1\" step=\"1\">
-	<label>Inicio:</label><input type=\"date\" name=\"inicio\">
-	<label> Hora: </label> <input type=\"number\" name=\"hora\" min=\"0\" max=\"23\"/>
-    <label> Minutos: </label><input type=\"number\" name=\"minuto\" min=\"0\" max=\"59\"/>
-	<label>Duración en minutos:</label><input type=\"number\" name=\"duracion\">
-	<input type=\"file\" name=\"photo\"/> 
+	<label>Nombre:</label><input type=\"text\" name=\"nombre\"><br>
+	<label>Tipo:</label><input type=\"text\" name=\"tipo\"><br>
+	<label>Descripción:</label><textarea name=\"descripcion\"></textarea><br>
+	<label>Precio:</label><input type=\"number\" name=\"precio\" min=\"0\" step=\"any\"><br>
+	<label>Aforo:</label><input type=\"number\" name=\"aforo\" min=\"1\" step=\"1\"><br>
+	<label>Inicio:</label><input type=\"date\" name=\"inicio\"><br>
+	<label> Hora: </label> <input type=\"number\" name=\"hora\" min=\"0\" max=\"23\"/><br>
+    <label> Minutos: </label><input type=\"number\" name=\"minuto\" min=\"0\" max=\"59\"/><br>
+	<label>Duración en minutos:</label><input type=\"number\" name=\"duracion\"><br>
+	<input type=\"file\" name=\"photo\"/><br>
 	<input type=\"submit\" name=\"action\" value=\"Añadir\">
 	<input type=\"submit\" name=\"action\" value=\"Cancelar\">
 	</form>";
