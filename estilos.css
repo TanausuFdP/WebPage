@@ -4,7 +4,7 @@ body{
 	margin-top: 40pt;
 }
 
-p, a{
+p, a, label{
 	font-size: 10pt;
 	font-family: 'Poppins', Sans-Serif;
 	margin: auto;
@@ -16,6 +16,11 @@ p, a{
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Poppins', Sans-Serif;
+}
+
+input, button, textarea{
+	border: 0;
+	background-color: white;
 }
 
 /*View*/
@@ -255,6 +260,14 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 20pt;
 }
 
+.login .submit{
+	width: 100pt;
+	height: 25pt;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .login2{
 	background-color: #0094e6;
 	margin-top: 5pt;
@@ -279,6 +292,14 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 20pt;
 }
 
+.login2 .submit{
+	width: 100pt;
+	height: 25pt;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .error{
 	color: red;
 	padding: 0;
@@ -292,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 /*Activity*/
 
 .activityName{
-	margin-top: 80pt;
+	margin-top: 100pt;
 	text-align: center;
 }
 
@@ -324,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 150pt;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 70pt;
+	margin-top: 100pt;
 	display: block;
 }
 
@@ -407,4 +428,69 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	margin-left: auto;
 	margin-right: 10pt;
+}
+
+/*Modify*/
+
+.modify{
+	background-color: #0094e6;
+	height: 600pt;
+	width: 500pt;
+	margin-top: 100pt;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 5px;
+}
+
+.modify h2{
+	padding-top: 20pt;
+	padding-bottom: 20pt;
+	text-align: center;
+	color: white;
+}
+
+.modify input{
+	border-radius: 5px;
+	height: 20pt;
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+}
+
+.modify label{
+	color: white;
+}
+
+.modify textarea{
+	border-radius: 5px;
+	height: 60pt;
+	width: 400pt;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+	display: block;
+}
+
+.modify .leftInput{
+	width: 400pt;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modify .leftInput2{
+	width: 350pt;
+	margin-left: 50pt;
+}
+
+.modify .leftInput3{
+	margin-left: 50pt;
+}
+
+.modify .submit{
+	width: 130pt;
+	height: 25pt;
+	margin-left: 80pt;
+	margin-top: 30pt;
 }

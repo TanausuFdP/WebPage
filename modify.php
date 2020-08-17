@@ -62,39 +62,45 @@ if(array_key_exists("id", $_REQUEST)){
     $minute=date("i", $activity['inicio']);
     $duracion=$activity['duracion']/60;
 
-	echo "<form enctype=\"multipart/form-data\" action=\"modify.php\" method=\"post\">
+	echo "<div class=\"modify\">
+	<h2>Modificar la actividad \"{$activity['nombre']}\"</h2>
+	<form enctype=\"multipart/form-data\" action=\"modify.php\" method=\"post\">
 	<input type=\"hidden\" name=\"id\" value=\"{$activity['id']}\">
-	<label>Nombre:</label><input type=\"text\" name=\"nombre\" value=\"{$activity['nombre']}\"><br>
-	<label>Tipo:</label><input type=\"text\" name=\"tipo\" value=\"{$activity['tipo']}\"><br>
-	<label>Descripción:</label><textarea name=\"descripcion\">{$activity['descripcion']}</textarea><br>
-	<label>Precio:</label><input type=\"number\" name=\"precio\" value=\"{$activity['precio']}\" min=\"0\" step=\"any\"><br>
-	<label>Aforo:</label><input type=\"number\" name=\"aforo\" value=\"{$activity['aforo']}\" min=\"1\" step=\"1\"><br>
-	<label>Inicio:</label><input type=\"date\" name=\"inicio\" value=\"$date\"><br>
-	<label> Hora: </label> <input type=\"number\" name=\"hora\" min=\"00\" max=\"23\" value=\"$hour\"/><br>
-    <label> Minutos: </label><input type=\"number\" name=\"minuto\" min=\"00\" max=\"59\" value=\"$minute\"/><br>
-	<label>Duración en minutos:</label><input type=\"number\" name=\"duracion\" value=\"$duracion\"><br>
-	<input type=\"file\" name=\"photo\"/><br>
-	<input type=\"submit\" name=\"action\" value=\"Modificar\">
-	<input type=\"submit\" name=\"action\" value=\"Cancelar\">
-	</form>";
+	<input class=\"leftInput\" type=\"text\" name=\"nombre\" value=\"{$activity['nombre']}\" placeholder=\"Nombre\"><br>
+	<input class=\"leftInput\" type=\"text\" name=\"tipo\" value=\"{$activity['tipo']}\" placeholder=\"Tipo\"><br>
+	<textarea name=\"descripcion\" placeholder=\"Descripción\">{$activity['descripcion']}</textarea><br>
+	<input class=\"leftInput2\" type=\"number\" name=\"precio\" value=\"{$activity['precio']}\" min=\"0\" step=\"any\"><label> €/ticket</label><br>
+	<input class=\"leftInput2\" type=\"number\" name=\"aforo\" value=\"{$activity['aforo']}\" min=\"1\" step=\"1\"><label> personas</label><br>
+	<label class=\"leftInput3\">La actividad comienza el </label><input type=\"date\" name=\"inicio\" value=\"$date\" placeholder=\"aaaa-MM-dd\">
+	<label> a las</label> <input type=\"number\" name=\"hora\" min=\"00\" max=\"23\" value=\"$hour\"/>
+    <label> y </label><input type=\"number\" name=\"minuto\" min=\"00\" max=\"59\" value=\"$minute\"/><br>
+	<label class=\"leftInput3\">La actividad dura </label><input type=\"number\" name=\"duracion\" value=\"$duracion\"><label> minutos</label><br>
+	<input class=\"leftInput\" type=\"file\" name=\"photo\"/><br>
+	<input class=\"submit\" type=\"submit\" name=\"action\" value=\"Modificar\">
+	<input class=\"submit\" type=\"submit\" name=\"action\" value=\"Cancelar\">
+	</form>
+	</div>";
 } else {
 	View::start("GCActiva - Nueva actividad");
 	View::topBar(0);
 
-	echo "<form enctype=\"multipart/form-data\" action=\"modify.php\" method=\"post\">
-	<label>Nombre:</label><input type=\"text\" name=\"nombre\"><br>
-	<label>Tipo:</label><input type=\"text\" name=\"tipo\"><br>
-	<label>Descripción:</label><textarea name=\"descripcion\"></textarea><br>
-	<label>Precio:</label><input type=\"number\" name=\"precio\" min=\"0\" step=\"any\"><br>
-	<label>Aforo:</label><input type=\"number\" name=\"aforo\" min=\"1\" step=\"1\"><br>
-	<label>Inicio:</label><input type=\"date\" name=\"inicio\"><br>
-	<label> Hora: </label> <input type=\"number\" name=\"hora\" min=\"0\" max=\"23\"/><br>
-    <label> Minutos: </label><input type=\"number\" name=\"minuto\" min=\"0\" max=\"59\"/><br>
-	<label>Duración en minutos:</label><input type=\"number\" name=\"duracion\"><br>
-	<input type=\"file\" name=\"photo\"/><br>
-	<input type=\"submit\" name=\"action\" value=\"Añadir\">
-	<input type=\"submit\" name=\"action\" value=\"Cancelar\">
-	</form>";
+	echo "<div class=\"modify\">
+	<h2>Nueva actividad</h2>
+	<form enctype=\"multipart/form-data\" action=\"modify.php\" method=\"post\">
+	<input class=\"leftInput\" type=\"text\" name=\"nombre\" placeholder=\"Nombre\"><br>
+	<input class=\"leftInput\" type=\"text\" name=\"tipo\" placeholder=\"Tipo\"><br>
+	<textarea name=\"descripcion\" placeholder=\"Descripción\"></textarea><br>
+	<input class=\"leftInput2\" type=\"number\" name=\"precio\" min=\"0\" step=\"any\"><label> €/ticket</label><br>
+	<input class=\"leftInput2\" type=\"number\" name=\"aforo\" min=\"1\" step=\"1\"><label> personas</label><br>
+	<label class=\"leftInput3\">La actividad comienza el </label><input type=\"date\" name=\"inicio\" placeholder=\"aaaa-MM-dd\">
+	<label> a las</label> <input type=\"number\" name=\"hora\" min=\"00\" max=\"23\"/>
+    <label> y </label><input type=\"number\" name=\"minuto\" min=\"00\" max=\"59\" /><br>
+	<label class=\"leftInput3\">La actividad dura </label><input type=\"number\" name=\"duracion\" ><label> minutos</label><br>
+	<input class=\"leftInput\" type=\"file\" name=\"photo\"/><br>
+	<input class=\"submit\" class=\"submit\" type=\"submit\" name=\"action\" value=\"Añadir\">
+	<input class=\"submit\" type=\"submit\" name=\"action\" value=\"Cancelar\">
+	</form>
+	</div>";
 }
 
 View::end();

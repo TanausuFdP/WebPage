@@ -19,11 +19,11 @@ if(array_key_exists('userName', $_REQUEST)){
 echo "<div class=\"$class\">
 <h2>Iniciar sesión</h2>
 <form action=\"login.php\" method=\"post\">
-<input type=\"text\" name=\"userName\">
+<input type=\"text\" name=\"userName\" placeholder=\"Nombre de usuario\">
 <br>
-<input type=\"password\" name=\"userPassword\">
+<input type=\"password\" name=\"userPassword\" placeholder=\"Contraseña\">
 <br>
-<input type=\"submit\" value=\"Acceder\">
+<input class=\"submit\" type=\"submit\" value=\"Acceder\">
 </form>
 </div>";
 
